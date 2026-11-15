@@ -92,7 +92,7 @@
 
 ---
 
-## 🚀 Quickstart & Run Instructions
+##  Quickstart & Run Instructions
 
 ### 1. Prerequisites
 - Python 3.10+ (tested on Python 3.14)
@@ -128,7 +128,7 @@ Open `http://127.0.0.1:5173` in your browser.
 
 ---
 
-## 🧪 Testing & Verification
+##  Testing & Verification
 
 Run the unit test suite:
 ```bash
@@ -149,14 +149,13 @@ python scripts/ingest.py --region california --start 2024-08-01 --end 2024-08-20
 
 ---
 
-## 🔒 Security & Provenance
-- Zero API keys are included in the frontend bundle (`SECURITY.md`).
+##  Security & Provenance
 - Bounding box dimension guards prevent compute exhaustion ($< 30^\circ \times 30^\circ$).
 - Rate limiting restricts requests to 120 calls/minute per IP.
 - All numbers trace directly to real NASA FIRMS and Open-Meteo ERA5 observations.
 
 ---
 
-## 📚 Further Scientific Documentation
+## Further Scientific Documentation
 - Detailed sensor harmonization method: [docs/harmonisation.md](docs/harmonisation.md)
 - Data provenance and operational caveats: [docs/methods-and-limitations.md](docs/methods-and-limitations.md)
