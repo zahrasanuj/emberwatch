@@ -27,16 +27,19 @@ class BoundaryManager:
         self.countries = []
         self.states = []
         self.by_id = {}
-        for path, target in [(NE_COUNTRIES_FILE, self.countries), (NE_STATES_FILE, self.states)]:
-            if not path.exists():
-                continue
-            for feature in json.loads(path.read_text(encoding='utf-8'))['features']:
-                p = feature['properties']
-                item = {**p, 'geometry': feature['geometry']}
-                target.append(item)
-                for key in [p.get('id'), p.get('iso3'), p.get('name')]:
-                    if key:
-                        self.by_id[str(key).lower()] = item
+        if NE_COUNTRIES_FILE.exists():
+            try:
+                with open(NE_COUNTRIES_FILE, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    for feature in data.get('features', []):
+                        p = feature.get('properties', {})
+                        item = {**p, 'bbox': feature.get('bbox', [])}
+                        self.countries.append(item)
+                        for key in [p.get('id'), p.get('iso3'), p.get('name')]:
+                            if key:
+                                self.by_id[str(key).lower()] = item
+            except Exception as e:
+                print(f'Error loading countries metadata: {e}')
 
     def list_countries(self):
         return [{k: v for k, v in c.items() if k != 'geometry'} for c in self.countries]

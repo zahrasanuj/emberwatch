@@ -16,8 +16,8 @@ LIVE_HOTSPOTS_FILE = PROCESSED_DATA_DIR / 'live_hotspots_30d.parquet'
 
 class DataIntegrityEngine:
 
-    def __init__(self):
-        self.profile_mgr = SourceProfileManager()
+    def __init__(self, profile_mgr: Optional[SourceProfileManager] = None):
+        self.profile_mgr = profile_mgr or SourceProfileManager()
         self._init_manifest()
 
     def _init_manifest(self, force: bool=False):

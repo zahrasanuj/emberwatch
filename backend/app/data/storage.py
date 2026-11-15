@@ -20,7 +20,6 @@ class StorageManager:
         self.cached_timeseries: Dict[str, List[Dict[str, Any]]] = {}
         self.cached_fingerprints: Dict[str, Dict[str, Any]] = {}
         self.cached_timelines: Dict[str, Dict[str, Any]] = {}
-        self._load_all_preset_parquets()
 
     @property
     def db(self):

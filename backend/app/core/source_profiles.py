@@ -21,7 +21,13 @@ class SourceProfileManager:
         self.last_availability_fetch: Optional[datetime] = None
         self._init_requests_log()
         self._init_calibration_store()
-        self.refresh_data_availability(force=False)
+        if DATA_AVAILABILITY_FILE.exists():
+            try:
+                with open(DATA_AVAILABILITY_FILE, 'r', encoding='utf-8') as f:
+                    cached = json.load(f)
+                    self.availability_cache = cached.get('sources', {})
+            except Exception:
+                pass
 
     def _load_config(self) -> Dict[str, Any]:
         if CONFIG_PATH.exists():
