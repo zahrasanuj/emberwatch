@@ -1,5 +1,7 @@
 # EMBERWATCH: Satellite Burning-Activity Intelligence Platform
 
+Project Link - View it here: https://elaborate-otter-cfe699.netlify.app/
+
 > **Predict. Detect. Prepare.**  
 > Harmonising 20+ years of NASA MODIS (2000–present) and VIIRS (2012–present) active fire detections into one continuous, physically consistent burning activity calendar, paired with climatological anomaly detection, predictive quantile forecasting, explainability, and operational preparedness guidance.
 
