@@ -1,0 +1,84 @@
+{
+  "last_live_update": "2026-11-15T18:25:55.994271+00:00",
+  "live_hotspots_count": 127756,
+  "total_grid_cells_stored": 33409,
+  "disk_usage_mb": 2.92,
+  "per_sensor_year": {
+    "MODIS": {
+      "2017": {
+        "cell_day_rows": 141,
+        "total_detections": 1855,
+        "date_range": "2017-10-15 to 2017-10-19",
+        "status": "partial"
+      },
+      "2019": {
+        "cell_day_rows": 969,
+        "total_detections": 9947,
+        "date_range": "2019-08-20 to 2019-12-31",
+        "status": "partial"
+      },
+      "2020": {
+        "cell_day_rows": 3526,
+        "total_detections": 26566,
+        "date_range": "2020-01-01 to 2020-11-09",
+        "status": "partial"
+      },
+      "2021": {
+        "cell_day_rows": 160,
+        "total_detections": 5586,
+        "date_range": "2021-08-15 to 2021-08-19",
+        "status": "partial"
+      },
+      "2026": {
+        "cell_day_rows": 3665,
+        "total_detections": 10456,
+        "date_range": "2026-11-13 to 2026-11-15",
+        "status": "partial"
+      }
+    },
+    "VIIRS": {
+      "2017": {
+        "cell_day_rows": 213,
+        "total_detections": 5909,
+        "date_range": "2017-10-15 to 2017-10-19",
+        "status": "partial"
+      },
+      "2019": {
+        "cell_day_rows": 1718,
+        "total_detections": 53827,
+        "date_range": "2019-08-20 to 2019-12-31",
+        "status": "partial"
+      },
+      "2020": {
+        "cell_day_rows": 5606,
+        "total_detections": 115526,
+        "date_range": "2020-01-01 to 2020-11-09",
+        "status": "partial"
+      },
+      "2021": {
+        "cell_day_rows": 284,
+        "total_detections": 25634,
+        "date_range": "2021-08-15 to 2021-08-19",
+        "status": "partial"
+      },
+      "2026": {
+        "cell_day_rows": 17127,
+        "total_detections": 117301,
+        "date_range": "2026-11-10 to 2026-11-15",
+        "status": "partial"
+      }
+    }
+  },
+  "sources_active": [
+    "NASA FIRMS MODIS_NRT (Terra/Aqua)",
+    "NASA FIRMS VIIRS_NOAA20_NRT",
+    "NASA FIRMS VIIRS_NOAA21_NRT",
+    "NASA FIRMS MODIS_SP (Historical Archive)",
+    "NASA FIRMS VIIRS_SNPP_SP (Historical Archive)",
+    "Open-Meteo ERA5 Reanalysis Weather",
+    "Open-Meteo CAMS Air Quality (PM2.5)"
+  ],
+  "gaps": [
+    "Full global history is not ingested; observed dates do not establish complete coverage."
+  ]
+}

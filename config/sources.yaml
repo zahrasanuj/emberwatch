@@ -1,0 +1,80 @@
+# EMBERWATCH FIRMS Data Source Profiles
+# Single source of truth for NASA FIRMS ingestion profiles and harmonisation constraints
+
+profiles:
+  historical:
+    name: "Historical Climatology"
+    description: "Multi-decadal climatological baselines, calendars, fingerprints, fire memory, and predictive model training"
+    sources:
+      - id: "MODIS_SP"
+        family: "MODIS"
+        satellite: "Terra/Aqua"
+        resolution_km: 1.0
+        product_type: "SP"
+        role: "primary"
+      - id: "MODIS_NRT"
+        family: "MODIS"
+        satellite: "Terra/Aqua"
+        resolution_km: 1.0
+        product_type: "NRT"
+        role: "bridging" # Only for dates SP does not yet cover
+      - id: "VIIRS_SNPP_SP"
+        family: "VIIRS"
+        satellite: "Suomi-NPP"
+        resolution_km: 0.375
+        product_type: "SP"
+        role: "primary"
+      - id: "VIIRS_SNPP_NRT"
+        family: "VIIRS"
+        satellite: "Suomi-NPP"
+        resolution_km: 0.375
+        product_type: "NRT"
+        role: "bridging" # Only bridging recent window
+    supersession:
+      rule: "SP_SUPERSEDES_NRT"
+      description: "For any calendar date where SP standard processing records exist, delete NRT rows for that date and sensor family"
+    calibration:
+      baseline_family: "VIIRS_SNPP"
+      target_resolution_deg: 0.25
+      modis_to_viirs_ratio: 0.42
+
+  live:
+    name: "Active Operations & Heatmap"
+    description: "Active hotspot detection, 24h thermal radiative power, live heatmap, and immediate operational response"
+    sources:
+      - id: "VIIRS_NOAA20_NRT"
+        family: "VIIRS"
+        satellite: "NOAA-20"
+        resolution_km: 0.375
+        product_type: "NRT"
+        role: "primary"
+      - id: "VIIRS_NOAA21_NRT"
+        family: "VIIRS"
+        satellite: "NOAA-21"
+        resolution_km: 0.375
+        product_type: "NRT"
+        role: "primary"
+      - id: "MODIS_NRT"
+        family: "MODIS"
+        satellite: "Terra/Aqua"
+        resolution_km: 1.0
+        product_type: "NRT"
+        role: "optional_toggle"
+    cross_sensor_calibration:
+      target_baseline_equivalent: "VIIRS_SNPP"
+      noaa20_to_snpp_factor: 0.982
+      noaa21_to_snpp_factor: 1.018
+      min_r_squared_threshold: 0.85
+
+data_availability:
+  endpoint: "https://firms.modaps.eosdis.nasa.gov/api/data_availability/csv/{MAP_KEY}/ALL"
+  refresh_interval_hours: 6
+  clamp_windows_to_availability: true
+  enable_noaa_sp: false
+
+api_rules:
+  max_chunk_days: 10
+  rate_limit_backoff_base_sec: 2.0
+  max_retries: 5
+  cache_raw_responses: true
+  requests_table: "requests_log"

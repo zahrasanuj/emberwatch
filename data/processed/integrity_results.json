@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-11-14T10:13:59.837333+00:00",
+  "duration_ms": 4002.2,
+  "overall_status": "pass",
+  "has_failures": false,
+  "total_checks": 14,
+  "passed_checks": 14,
+  "warning_checks": 0,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "name": "FIRMS API Data Availability Range Audit",
+      "code": "check_1_availability",
+      "status": "pass",
+      "sample_size": 2,
+      "sources_checked": [
+        "MODIS",
+        "VIIRS"
+      ],
+      "mismatches": [],
+      "description": "Cross-references local partition bounds with NASA EOSDIS reported date limits."
+    },
+    {
+      "name": "Ingest Manifest & Row Reconciliation",
+      "code": "check_2_row_reconciliation",
+      "status": "pass",
+      "sample_size": 5,
+      "tolerance": "Zero tolerance (Exact match)",
+      "mismatches": [],
+      "description": "Asserts byte-level conservation of fire pixels through DuckDB aggregations."
+    },
+    {
+      "name": "NASA FIRMS API Stratified Re-Fetch",
+      "code": "check_3_live_refetch",
+      "status": "pass",
+      "sample_size": 20,
+      "match_rate_pct": 100.0,
+      "mismatches": [],
+      "description": "Samples historical grid cell-days and confirms consistency with EOSDIS area archives."
+    },
+    {
+      "name": "Dual-Path Independent Recomputation (DuckDB vs Pandas)",
+      "code": "check_4_independent_recomputation",
+      "status": "pass",
+      "sample_size": 5,
+      "tolerance": "Count exact, Float diff < 1e-6",
+      "mismatches": [],
+      "description": "Recomputes metrics using an isolated pandas aggregation kernel to ensure zero SQL distortion."
+    },
+    {
+      "name": "Live Telemetry Feed Boundary Audit",
+      "code": "check_5_live_feed",
+      "status": "pass",
+      "sample_size": 1,
+      "mismatches": [],
+      "description": "Verifies live streaming layer matches authoritative 15-minute NASA FIRMS broadcast."
+    },
+    {
+      "name": "Standard Processing (SP) Supersession Integrity",
+      "code": "check_6_supersession",
+      "status": "pass",
+      "sample_size": 5,
+      "mismatches": [],
+      "description": "Guarantees no date contains overlapping uncalibrated NRT and finalized SP data."
+    },
+    {
+      "name": "Cross-Sensor Harmonisation & R\u00b2 Sanity Audit",
+      "code": "check_7_harmonisation",
+      "status": "pass",
+      "sample_size": 3,
+      "calibrations": {
+        "NOAA20_to_SNPP": {
+          "factor": 0.982,
+          "r_squared": 0.934,
+          "overlap_window": "2018-04 to 2026-07",
+          "description": "VIIRS NOAA-20 375m scaled to Suomi-NPP 375m baseline equivalent"
+        },
+        "NOAA21_to_SNPP": {
+          "factor": 1.018,
+          "r_squared": 0.912,
+          "overlap_window": "2023-03 to 2026-07",
+          "description": "VIIRS NOAA-21 375m scaled to Suomi-NPP 375m baseline equivalent"
+        },
+        "MODIS_to_SNPP": {
+          "factor": 0.42,
+          "r_squared": 0.895,
+          "overlap_window": "2012-01 to 2026-07",
+          "description": "MODIS Terra/Aqua 1km cell-days scaled to VIIRS Suomi-NPP 375m equivalent"
+        }
+      },
+      "mismatches": [],
+      "description": "Asserts overlap regressions between MODIS, VIIRS SNPP, and NOAA-20/21 exceed R\u00b2 \u2265 0.85."
+    },
+    {
+      "name": "Deterministic Template & Zero-Hallucination Assertion",
+      "code": "check_8_templates",
+      "status": "pass",
+      "sample_size": 12,
+      "mismatches": [],
+      "description": "Verifies all natural-language takeaways are strictly compiled from deterministic code templates."
+    },
+    {
+      "name": "Chronological Model Split & Leakage Verification",
+      "code": "check_9_model_integrity",
+      "status": "pass",
+      "train_max_date": "2021-12-31",
+      "test_min_date": "2022-01-01",
+      "mismatches": [],
+      "description": "Validates strictly forward-looking evaluation without retrospective contamination."
+    },
+    {
+      "name": "Open-Meteo ERA5 / CAMS Atmospheric Telemetry Audit",
+      "code": "check_10_weather",
+      "status": "pass",
+      "sample_size": 20,
+      "mismatches": [],
+      "description": "Validates meteorological forcing variables and PM2.5 smoke exposure values."
+    },
+    {
+      "name": "Heat Level Classification & 50-Sample Independent Recomputation",
+      "code": "check_11_heat_level_recomputation",
+      "status": "pass",
+      "sample_size": 54,
+      "mismatches": [],
+      "description": "Recomputes heat level for 50 random satellite hotspots and area samples independently and compares against thresholds."
+    },
+    {
+      "name": "Heat Level Thresholds & Config Reconciliation",
+      "code": "check_12_heat_level_thresholds",
+      "status": "pass",
+      "sample_size": 4,
+      "mismatches": [],
+      "description": "Verifies that UI and backend heat classification thresholds strictly match config/heat_levels.yaml."
+    },
+    {
+      "name": "Environmental Knowledge Base Schema & Wording Validation",
+      "code": "check_13_knowledge_strings",
+      "status": "pass",
+      "sample_size": 71,
+      "mismatches": [],
+      "description": "Validates that every knowledge-base string exists in data/impact_knowledge.json with strict compliance to probabilistic wording ('can', 'may', 'commonly')."
+    },
+    {
+      "name": "Knowledge Base Real Citations & Provenance Audit",
+      "code": "check_14_citations",
+      "status": "pass",
+      "sample_size": 9,
+      "mismatches": [],
+      "lacking_sources": [],
+      "description": "Verifies that all scientific assertions in the knowledge base are backed by real agency / peer-reviewed citations."
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "version": "1.0.0",
+  "disclaimer": "General risks associated with this heat level, not a measurement of damage at this location.",
+  "levels": [
+    {
+      "id": "extreme",
+      "label": "Extreme",
+      "frp_min": 50.0,
+      "frp_max": null,
+      "regions": [
+        "Boreal forests (Canada, Siberia)",
+        "Western US conifer forests",
+        "Persian Gulf and Permian Basin industrial flare fields",
+        "Active volcanic belts (Pacific Ring of Fire)"
+      ],
+      "causes": [
+        "High-intensity crown fires running through dense forest fuel ladders",
+        "Severe pyrocumulonimbus-generating conflagrations under dry gusting winds",
+        "High-throughput upstream petroleum and gas production flare stacks",
+        "Active subaerial volcanic lava vents and pyroclastic fountaining"
+      ],
+      "issues": [
+        "Stratospheric smoke injection punching through the tropopause",
+        "Severe soil heating that can consume deep organic layers and seed banks",
+        "Extreme radiant heat fluxes preventing direct wildland attack",
+        "Long-range transboundary transport of toxic atmospheric aerosols"
+      ],
+      "harms": {
+        "air_climate": [
+          "Violent pyroconvection can inject black carbon and reactive aerosol plumes directly into the stratosphere, where they can persist for months and perturb regional albedo.",
+          "Massive short-term pulses of greenhouse gases (CO2, CH4, N2O) and volatile organic compounds (VOCs) commonly accelerate atmospheric warming.",
+          "Industrial flaring can emit concentrated sulfur dioxide (SO2) contributing to localized acid precipitation, alongside elevated NOx forming ground-level ozone."
+        ],
+        "soil_land": [
+          "Extreme heat commonly sterilizes upper soil layers, eliminating mycorrhizal fungal networks and beneficial microbial communities.",
+          "Severe burn severity can vaporize soil organic compounds that condense into a subsurface hydrophobic (water-repellent) crust, sharply elevating landslide and catastrophic post-fire debris flow risks.",
+          "Unenclosed industrial flares may deposit heavy metals and polycyclic aromatic hydrocarbons (PAHs) onto surrounding soil."
+        ],
+        "water": [
+          "Post-fire storms can wash massive loads of ash, toxic heavy metals, and particulate sediment into drinking water catchments and reservoirs.",
+          "Excessive nutrient runoff (phosphorus, nitrogen) can trigger rapid eutrophication and toxic cyanobacterial blooms, causing widespread fish kills.",
+          "Hydrocarbon breakdown products such as benzene can potentially leach into municipal drinking water conduits following severe soil heating."
+        ],
+        "snow_ice": [
+          "Refractory black carbon particles can settle onto sub-Arctic snowpack and alpine glaciers, lowering surface albedo and accelerating seasonal melt cycles.",
+          "Soot deposition on snow surfaces can advance snow-cover depletion by several weeks, triggering early streamflow depletion."
+        ],
+        "wildlife": [
+          "Stand-replacing thermal intensity can destroy critical nesting trees, old-growth snags, and sub-canopy microclimates.",
+          "Severe burns may facilitate the rapid colonisation of fire-prone invasive cheatgrass and flammable shrub species, altering natural succession.",
+          "Intense luminescent radiance from continuous high-volume flares can disrupt migratory bird navigation and nocturnal insect feeding behaviour."
+        ],
+        "human_health": [
+          "Extreme PM2.5 concentrations exceeding hundreds of micrograms per cubic metre can cause acute cardiovascular crises, severe asthma exacerbations, and premature mortality.",
+          "Volatile organic compounds, benzene, and formaldehyde from unburned flare gases can elevate occupational cancer hazards and chronic respiratory disease.",
+          "Catastrophic wildland fire runs may destroy community infrastructure, municipal drinking water grids, and timber reserves."
+        ]
+      },
+      "response_options": [
+        "Stationary hotspots: Flare gas recovery units (FGRU) and enclosed combustors represent proven engineering methods to capture waste gas, mitigating methane and volatile organic emissions.",
+        "Stationary heat recovery: Industrial literature cites Organic Rankine Cycle (ORC) power generators for converting high-temperature industrial heat (reported range 1 to 150+ MW electricity, unverified working assumption from technical literature; radiative power seen from space is not recoverable energy).",
+        "Wildland zones: Mechanical fuel thinning, defensible fuel profile zones (DFPZs), and rapid hydromulching / straw wattle deployment on steep slopes to mitigate debris flow hazards before winter storms."
+      ],
+      "sources": [
+        {
+          "title": "NASA FIRMS Active Fire Data and FRP Measurement Principles",
+          "publisher": "NASA Earth Science Data and Information System (ESDIS)",
+          "url": "https://firms.modaps.eosdis.nasa.gov/",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "Pyroconvective Smoke Injection into the Stratosphere by Catastrophic Wildfires",
+          "publisher": "Proceedings of the National Academy of Sciences (PNAS)",
+          "url": "https://doi.org/10.1073/pnas.2108105118",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "WHO Ambient (Outdoor) Air Quality Guidelines for Fine Particulate Matter",
+          "publisher": "World Health Organization (WHO)",
+          "url": "https://www.who.int/publications/i/item/9789240034228",
+          "retrieved": "2026-11-14"
+        }
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "id": "high",
+      "label": "High",
+      "frp_min": 15.0,
+      "frp_max": 50.0,
+      "regions": [
+        "Amazon basin tropical deforested edges",
+        "Indonesian drained peatlands (Kalimantan, Sumatra)",
+        "Mediterranean sclerophyll forests and maquis shrublands",
+        "Major petrochemical processing corridors in China, India, and US Gulf Coast"
+      ],
+      "causes": [
+        "Agricultural land clearing and slash burning following deforestation",
+        "Moderate-to-high intensity peat and surface woodland fires",
+        "Mid-tier industrial refinery and petrochemical process flaring",
+        "Dry-season chaparral and shrubland fires under moderate wind shear"
+      ],
+      "issues": [
+        "Rapid degradation of regional carbon storage reservoirs",
+        "Dense regional smog blankets causing widespread aviation and transport halts",
+        "Substantial topsoil heating and localized vegetative canopy kill",
+        "Transboundary transport of particulate matter across international boundaries"
+      ],
+      "harms": {
+        "air_climate": [
+          "Sustained burning can release extensive carbon dioxide and methane, diminishing the carbon sequestration capacity of forested biomes.",
+          "Elevated emissions of NOx and reactive hydrocarbons commonly interact under sunlight to generate regional photochemical smog and ground-level ozone.",
+          "Dense PM2.5 smoke plumes can degrade ambient visibility over hundreds of square kilometres."
+        ],
+        "soil_land": [
+          "Moderate burn severity can consume protective ground leaf litter, leaving mineral soil exposed to intense raindrop impact and surface rill erosion.",
+          "Peat ignition can burn into underlying organic substrate, destabilizing surface topography and root structures.",
+          "Industrial particulate settling around refineries can deposit trace hydrocarbons on adjacent agricultural parcels."
+        ],
+        "water": [
+          "Runoff carrying ash, nitrates, and dissolved organic carbon can elevate turbidity in municipal surface water intakes.",
+          "Increased stream temperatures following canopy loss may stress sensitive cold-water fish taxa and macroinvertebrate communities.",
+          "Sediment deposition can reduce reservoir storage capacity and accelerate turbine wear in hydroelectric installations."
+        ],
+        "snow_ice": [
+          "Mid-latitude soot deposition can settle onto seasonal alpine snowfields, reducing surface reflectivity and advancing spring melt.",
+          "Particulate deposition may reduce glacial albedo in bordering mountainous regions."
+        ],
+        "wildlife": [
+          "Canopy and understory mortality can cause significant fragmentation of critical wildlife travel corridors.",
+          "Smoke inhalation and rapid flame fronts may cause acute mortality in slow-moving amphibians, reptiles, and ground-dwelling mammals.",
+          "Artificial flare illumination and persistent noise can deter sensitive nocturnal mammals."
+        ],
+        "human_health": [
+          "Prolonged exposure to regional smoke can increase hospital admissions for chronic obstructive pulmonary disease (COPD) and ischemic heart disease.",
+          "Particulate matter can cause widespread eye irritation, bronchitis, and reduced lung capacity among outdoor laborers.",
+          "Smoke haze can cause school closures, transport disruptions, and substantial economic losses across agricultural regions."
+        ]
+      },
+      "response_options": [
+        "Peat and forest management: Rewetting drained peatlands by canal blocking to maintain water table levels and prevent deep subsurface ignition.",
+        "Industrial flaring: Installation of low-emission multi-point flare burners, optical flame verification, and vapor recovery systems to reduce slip.",
+        "Public health: Timely distribution of N95 respirators, public clean air shelters, and HVAC air filtration advisories during multi-day smoke events."
+      ],
+      "sources": [
+        {
+          "title": "Tropical Peatland Fires: Atmospheric Carbon Emissions and Ecological Feedbacks",
+          "publisher": "Nature Geoscience",
+          "url": "https://doi.org/10.1038/ngeo2277",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "Air Quality and Health Impacts of Deforestation Fires in Equatorial Asia",
+          "publisher": "Environmental Health Perspectives",
+          "url": "https://doi.org/10.1289/ehp.1510378",
+          "retrieved": "2026-11-14"
+        }
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "id": "moderate",
+      "label": "Moderate",
+      "frp_min": 5.0,
+      "frp_max": 15.0,
+      "regions": [
+        "Sub-Saharan African savannas and open woodlands",
+        "Northern Australia tropical savannas",
+        "Agricultural cropping belts across Northern India and Southeast Asia",
+        "Temperate grassland and prairie reserves"
+      ],
+      "causes": [
+        "Prescribed early-season savanna burning to reduce late-dry-season fuel loads",
+        "Post-harvest crop residue disposal (paddy straw, wheat stubble, sugarcane trash)",
+        "Pastoral range burning to stimulate fresh palatable grass growth",
+        "Controlled understory broadcast burns in managed commercial timberlands"
+      ],
+      "issues": [
+        "Recurrent seasonal haze episodes across high-density agricultural basins",
+        "Loss of valuable organic soil nitrogen and soil carbon reserves",
+        "Cumulative photochemical oxidant generation affecting regional air basins",
+        "Displacement of small wildlife from seasonal foraging territories"
+      ],
+      "harms": {
+        "air_climate": [
+          "Widespread agricultural and savanna fires can generate seasonal spikes in carbon monoxide, volatile organics, and fine particulates.",
+          "Persistent seasonal emissions can react with solar radiation to generate elevated tropospheric ozone levels across downwind agricultural communities.",
+          "Smoke plumes commonly settle in valley inversions, causing dense morning haze blankets."
+        ],
+        "soil_land": [
+          "Repeated burning can volatilize topsoil nitrogen and sulfur, necessitating higher chemical fertilizer inputs for subsequent crops.",
+          "Loss of surface crop stubble can accelerate wind erosion during dry pre-monsoon windy periods.",
+          "Surface soil temperatures can temporarily disrupt shallow earthworm and beneficial insect populations."
+        ],
+        "water": [
+          "First post-burn runoff can flush dissolved nutrients and loose ash into local canals, ditches, and farm retention ponds.",
+          "Temporary nutrient enrichment in shallow waterways can stimulate nuisance filamentous algae growth.",
+          "Fine silt transport can increase sedimentation rates in irrigation canals."
+        ],
+        "snow_ice": [
+          "Atmospheric transport of carbonaceous aerosols may occasionally reach elevated snowlines in adjacent mountain ranges under favorable wind trajectories."
+        ],
+        "wildlife": [
+          "Prescribed burns can temporarily eliminate nesting cover for ground-dwelling birds and rodents.",
+          "Fast-moving surface grass fires can occasionally trap small non-volant fauna if escape refugia are insufficient.",
+          "Periodic cool-season fires can promote diverse herbaceous vegetation that benefits grazing ungulates over the long term."
+        ],
+        "human_health": [
+          "Agricultural smoke can aggravate pediatric asthma and cause recurring allergic conjunctivitis and throat irritation.",
+          "Prolonged exposure during seasonal harvesting windows can impair respiratory function in rural farm workers.",
+          "Visibility reduction from agricultural haze can elevate highway motor vehicle collision risks in rural transport corridors."
+        ]
+      },
+      "response_options": [
+        "Residue valorization: Mechanized straw baling for bioenergy pellets, thermal cogeneration, or biochar production to enrich farmland without open-air combustion.",
+        "Early dry-season savanna burning: Conducting strategic cool-season burns when grass curing is partial, reducing net carbon emissions and late-season fire severity.",
+        "Soil moisture coordination: Utilizing satellite soil moisture products and real-time ventilation index forecasts to schedule prescribed burns on optimal dispersion days."
+      ],
+      "sources": [
+        {
+          "title": "Agricultural Crop Residue Burning and Air Quality in South Asia",
+          "publisher": "Environmental Research Letters",
+          "url": "https://doi.org/10.1088/1748-9326/ab79cb",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "Savanna Fire Management and Emissions Abatement in Australia",
+          "publisher": "International Journal of Wildland Fire",
+          "url": "https://doi.org/10.1071/WF14034",
+          "retrieved": "2026-11-14"
+        }
+      ],
+      "review_status": "reviewed"
+    },
+    {
+      "id": "low",
+      "label": "Low or smouldering",
+      "frp_min": 0.0,
+      "frp_max": 5.0,
+      "regions": [
+        "Sub-Arctic and boreal peatlands ('zombie' or overwintering fires)",
+        "Underground coal seam fires (Jharia basin in India, Ningxia in China, Appalachian basin)",
+        "Residual post-front smouldering logs, stump holes, and forest slash piles"
+      ],
+      "causes": [
+        "Subsurface smouldering propagation through dense organic peat or duff layers",
+        "Overwintering 'zombie' combustion surviving beneath snow cover in Arctic peat",
+        "Spontaneous combustion or abandoned seam fires in exposed coal seams and mine tailings",
+        "Low-temperature flameless smouldering in forestry harvest residues and slash"
+      ],
+      "issues": [
+        "Incomplete combustion producing elevated toxic emission ratios per megawatt of radiative power",
+        "Subsurface spread that can remain undetected by visual observation for months before breaking out into flaming wildfires",
+        "Substantial subterranean ground collapse, subsidence, and hazard to personnel",
+        "Continuous year-round greenhouse gas emissions independent of seasonal weather"
+      ],
+      "harms": {
+        "air_climate": [
+          "Low-temperature smouldering emits disproportionately large quantities of carbon monoxide (CO), methane (CH4), and hazardous air pollutants per unit of fuel consumed.",
+          "Subsurface combustion commonly releases volatile polycyclic aromatic hydrocarbons (PAHs), hydrogen cyanide (HCN), and volatilized heavy metals like mercury.",
+          "Smouldering smoke has low thermal buoyancy, hugging the ground in high concentrations and pooling in inhabited lowlands."
+        ],
+        "soil_land": [
+          "Subsurface smouldering can consume deep organic soil layers that required centuries or millennia to accumulate.",
+          "Underground seam combustion can create subterranean void cavities, triggering severe ground collapse, surface sinkholes, and infrastructural damage.",
+          "Smouldering can destroy root systems from within, causing unexpected tree falls across roadways and firelines."
+        ],
+        "water": [
+          "Seepage from smouldering coal and peat beds can leach acidic drainage, dissolved organic carbon, and heavy metals directly into groundwater aquifers.",
+          "Combustion products can contaminate local springs and pristine headwater wetlands with aromatic compounds.",
+          "Permafrost degradation around smouldering sites can alter surface drainage patterns, draining tundra lakes."
+        ],
+        "snow_ice": [
+          "Overwintering zombie fires can smoulder beneath seasonal snowpack, transferring heat into permafrost soils and accelerating sub-surface thaw.",
+          "Spring breakout of smouldering peat fires directly deposits soot onto melting snowpack, accelerating regional albedo degradation."
+        ],
+        "wildlife": [
+          "Destruction of sub-surface burrows, rodent tunnels, and hibernacula can lead to severe mortality of overwintering fauna.",
+          "Dense ground-level toxic gas accumulation in hollows can asphyxiate ground-dwelling birds and mammals.",
+          "Loss of insulating permafrost moss layers damages unique tundra micro-habitats."
+        ],
+        "human_health": [
+          "High concentrations of carbon monoxide and toxic organic vapors pose acute life-threatening inhalation hazards to wildland firefighters and community residents.",
+          "Severe burn hazards and risk of traumatic injury from stepping onto concealed subterranean combustion pits and sinkholes.",
+          "Long-term exposure to coal seam smoke can cause chronic pneumoconiosis, respiratory illness, and elevated heavy metal body burdens."
+        ]
+      },
+      "response_options": [
+        "Subsurface thermal monitoring: Deployment of thermal infrared drones and ground temperature probes to map hidden subterranean combustion perimeters.",
+        "High-volume soil quenching: Deep soil trenching combined with high-volume water injection using surfactant wetting agents to saturate hydrophobic organic layers.",
+        "Mine sealing & smothering: Inert gas injection (nitrogen/CO2) into underground coal voids or covering surface fissures with compact, non-combustible clay overburden."
+      ],
+      "sources": [
+        {
+          "title": "Overwintering Fires in Boreal Forests and Peatlands",
+          "publisher": "Nature",
+          "url": "https://doi.org/10.1038/s41586-021-03537-z",
+          "retrieved": "2026-11-14"
+        },
+        {
+          "title": "Smouldering Peat and Coal Fires: Combustion Physics, Emissions, and Suppression",
+          "publisher": "Progress in Energy and Combustion Science",
+          "url": "https://doi.org/10.1016/j.pecs.2016.05.002",
+          "retrieved": "2026-11-14"
+        }
+      ],
+      "review_status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "NOAA20_to_SNPP": {
+    "factor": 0.982,
+    "r_squared": 0.934,
+    "overlap_window": "2018-04 to 2026-07",
+    "description": "VIIRS NOAA-20 375m scaled to Suomi-NPP 375m baseline equivalent"
+  },
+  "NOAA21_to_SNPP": {
+    "factor": 1.018,
+    "r_squared": 0.912,
+    "overlap_window": "2023-03 to 2026-07",
+    "description": "VIIRS NOAA-21 375m scaled to Suomi-NPP 375m baseline equivalent"
+  },
+  "MODIS_to_SNPP": {
+    "factor": 0.42,
+    "r_squared": 0.895,
+    "overlap_window": "2012-01 to 2026-07",
+    "description": "MODIS Terra/Aqua 1km cell-days scaled to VIIRS Suomi-NPP 375m equivalent"
+  }
+}

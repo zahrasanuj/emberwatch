@@ -1,0 +1,59 @@
+# EMBERWATCH Heat Level Thresholds and Environmental Classification
+# NOTE: Thresholds are working assumptions from the project report, pending validation
+# against the empirical NASA FIRMS FRP distribution.
+# Never mix MODIS and VIIRS pixel FRP without stating the sensor and resolution:
+# - MODIS: 1 km spatial resolution at nadir
+# - VIIRS (S-NPP / NOAA-20 / NOAA-21): 375 m spatial resolution at nadir
+
+version: "1.0.0"
+updated_at: "2026-11-14T12:00:00Z"
+
+# Heat Level Classification Thresholds (Fire Radiative Power in Megawatts)
+thresholds:
+  extreme:
+    id: "extreme"
+    label: "Extreme"
+    frp_min: 50.0
+    frp_max: null
+    description: "FRP exceeding 50 MW. High-intensity crown fires, catastrophic wildfire runs, heavy industrial flaring."
+    badge_color: "danger"
+    border_style: "heavy"
+  high:
+    id: "high"
+    label: "High"
+    frp_min: 15.0
+    frp_max: 50.0
+    description: "FRP from 15 to 50 MW. Peatland burns, deforestation clearing, mixed canopy fires, petrochemical flares."
+    badge_color: "danger"
+    border_style: "normal"
+  moderate:
+    id: "moderate"
+    label: "Moderate"
+    frp_min: 5.0
+    frp_max: 15.0
+    description: "FRP from 5 to 15 MW. Prescribed savanna burns, agricultural crop residue clearing, pastoral grassland fires."
+    badge_color: "warn"
+    border_style: "normal"
+  low:
+    id: "low"
+    label: "Low or smouldering"
+    frp_min: 0.0
+    frp_max: 5.0
+    description: "FRP below 5 MW. Subsurface smouldering in organic soils, overwintering zombie fires, coal seam fires."
+    badge_color: "ok"
+    border_style: "normal"
+
+# Source-Type Detection Rules
+source_detection:
+  grid_resolution_deg: 0.01  # Approximately 1.1 km at equator
+  persistent_source_days_threshold: 60  # Detected on >= 60 separate days across past 12 months
+  nighttime_share_threshold: 0.35  # At least 35% of detections during nighttime passes
+  labels:
+    stationary: "Likely stationary heat source (persistent detections)"
+    transient: "Likely transient fire (seasonal or episodic)"
+  caveat: "Detections alone cannot confirm industrial flares, volcanoes or other sources"
+
+# Context Biome & Latitude Rules
+context_rules:
+  high_latitude_threshold: 50.0  # Degrees North or South for Snow and ice section
+  peatland_boreal_tag: "approximate"

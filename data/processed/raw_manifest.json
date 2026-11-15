@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-11-14T10:13:55.635336+00:00",
+  "files": {
+    "grid_2017.parquet": {
+      "path": "F:\\Competitions\\NASA\\Web App First Draft\\data\\processed\\grid_025\\year=2017\\grid_2017.parquet",
+      "size_bytes": 9536,
+      "checksum_head": "e90d6f0fdf1224951aa809a4dd5328536b24d01f43e5aa48d72730662527e5fe",
+      "aggregated_cells": 354,
+      "active_detections": 7764,
+      "filtered_rows_removed": 0
+    },
+    "grid_2019.parquet": {
+      "path": "F:\\Competitions\\NASA\\Web App First Draft\\data\\processed\\grid_025\\year=2019\\grid_2019.parquet",
+      "size_bytes": 47308,
+      "checksum_head": "2f8ca48dedb9cd56199e123ddb38d5ae0bc5b663a4b67bb75781b1ed2c6e2d96",
+      "aggregated_cells": 2687,
+      "active_detections": 63774,
+      "filtered_rows_removed": 0
+    },
+    "grid_2020.parquet": {
+      "path": "F:\\Competitions\\NASA\\Web App First Draft\\data\\processed\\grid_025\\year=2020\\grid_2020.parquet",
+      "size_bytes": 119857,
+      "checksum_head": "ed5e31471ab3237982a04f6d1b00b009958591e6cc17b302ed525089c8aa3f2a",
+      "aggregated_cells": 9132,
+      "active_detections": 142092,
+      "filtered_rows_removed": 0
+    },
+    "grid_2021.parquet": {
+      "path": "F:\\Competitions\\NASA\\Web App First Draft\\data\\processed\\grid_025\\year=2021\\grid_2021.parquet",
+      "size_bytes": 12128,
+      "checksum_head": "f8e49bbc64342f54b3237d71c5753164507ecd46f8b7feb22eb1a52cf3edd346",
+      "aggregated_cells": 444,
+      "active_detections": 31220,
+      "filtered_rows_removed": 0
+    },
+    "grid_2026.parquet": {
+      "path": "F:\\Competitions\\NASA\\Web App First Draft\\data\\processed\\grid_025\\year=2026\\grid_2026.parquet",
+      "size_bytes": 133207,
+      "checksum_head": "fb6d49821099604afa985afe090454be996e4d39b78b0b102a8b184d6938cbf7",
+      "aggregated_cells": 9838,
+      "active_detections": 50384,
+      "filtered_rows_removed": 0
+    }
+  }
+}
